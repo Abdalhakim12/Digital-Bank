@@ -460,6 +460,7 @@ footer button:hover {
 @media (max-width: 430px) and (min-width: 425px) {
   header {
     background-color: hsl(233, 8%, 62%);
+    align-items: center;
   }
 
   .burger-menu {
@@ -490,7 +491,7 @@ footer button:hover {
   }
   nav {
     position: absolute;
-    margin-right: 1050px;
+    margin-right: 1150px;
     width: 100vw;
     gap: 25px;
     top: 0;
