@@ -22,6 +22,9 @@ header {
   width: 1550px;
   z-index: 22;
 }
+.burger-menu__checkbox {
+  display: none;
+}
 input {
   display: none;
 }
@@ -290,30 +293,51 @@ footer button:hover {
 
 .icon {
   margin-top: 5px;
-  /* margin-right: 550px; */
 }
 @media (max-width: 425px) {
-  /* header {
-    display: none;
-  } */
   .logo {
     display: none;
   }
-  label img {
-    width: 50px;
-    margin-right: 1020px;
+  header {
+    background-color: hsl(233, 8%, 62%);
+  }
+
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.5rem;
+    margin-right: 1000px;
+  }
+  .burger-menu-bar {
+    height: 0.3rem;
+    width: 4.375rem;
+    background-color: black;
+    transition: 0.5s ease-in-out;
+  }
+  header:has(.burger-menu__checkbox:checked) .burger-menu-bar:nth-child(1) {
+    transform: translateY(10px) rotate(40deg);
+  }
+  header:has(.burger-menu__checkbox:checked) .burger-menu-bar:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  header:has(.burger-menu__checkbox:checked) .burger-menu-bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-40deg);
+  }
+  .burger-menu__checkbox:checked + nav {
+    top: 90px;
   }
   nav {
     position: absolute;
-    margin-right: 1135px;
+    margin-right: 1080px;
+    width: 100vw;
     gap: 25px;
-    top: 30px;
+    top: 0;
+    z-index: -22;
+    transition: 0.5s ease-in-out;
+  }
 
-    z-index: -5;
-  }
-  .menu:checked + nav {
-    top: 1000px;
-  }
   .section1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -435,7 +459,43 @@ footer button:hover {
 }
 @media (max-width: 430px) and (min-width: 425px) {
   header {
-    display: none;
+    background-color: hsl(233, 8%, 62%);
+  }
+
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.5rem;
+    margin-right: 1000px;
+  }
+  .burger-menu-bar {
+    height: 0.3rem;
+    width: 4.375rem;
+    background-color: black;
+    transition: 0.5s ease-in-out;
+  }
+  header:has(.burger-menu__checkbox:checked) .burger-menu-bar:nth-child(1) {
+    transform: translateY(10px) rotate(40deg);
+  }
+  header:has(.burger-menu__checkbox:checked) .burger-menu-bar:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  header:has(.burger-menu__checkbox:checked) .burger-menu-bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-40deg);
+  }
+  .burger-menu__checkbox:checked + nav {
+    top: 90px;
+  }
+  nav {
+    position: absolute;
+    margin-right: 1050px;
+    width: 100vw;
+    gap: 25px;
+    top: 0;
+    z-index: -22;
+    transition: 0.5s ease-in-out;
   }
   .section1 {
     display: grid;
@@ -444,6 +504,7 @@ footer button:hover {
     padding-bottom: 25px;
     overflow: hidden;
     text-align: center;
+    padding-top: 100px;
   }
   .section1-div1 {
     margin-top: 0;
