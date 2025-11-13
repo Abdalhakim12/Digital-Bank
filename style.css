@@ -461,9 +461,7 @@ footer button:hover {
     color: rgba(45, 49, 77, 1);
     font-weight: bold;
   }
-  .section2 p {
-    text-align: center;
-  }
+
   .section1 p {
     font-size: 13px;
     color: hsl(233, 8%, 62%);
@@ -546,5 +544,9 @@ footer button:hover {
     margin: auto;
     width: 250px;
     aspect-ratio: 1/1;
+  }
+  .section2 {
+    margin-left: 0;
+    text-align: center;
   }
 }
