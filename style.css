@@ -306,10 +306,9 @@ footer button:hover {
   nav {
     position: absolute;
     margin-right: 1135px;
-    gap: 30px;
+    gap: 25px;
     top: 30px;
-    background-color: white;
-    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+
     z-index: -5;
   }
   .menu:checked + nav {
